@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Your Muzzomo Account - Account and Data Request</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #F4EFE4;
+        }
+
+        header {
+            background-color: #0C3D28;
+            color: #FFFFFF;
+            padding: 2rem 1rem;
+            text-align: center;
+            border-bottom: 4px solid #F0A500;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1rem;
+            opacity: 0.95;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .section {
+            background-color: #FFFFFF;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title {
+            color: #0C3D28;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid #F0A500;
+        }
+
+        .intro-text {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            color: #555;
+        }
+
+        .steps-container {
+            background-color: #F4EFE4;
+            padding: 1.5rem;
+            border-radius: 6px;
+            margin-bottom: 1.5rem;
+        }
+
+        .step {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .step:last-child {
+            margin-bottom: 0;
+        }
+
+        .step-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 2rem;
+            height: 2rem;
+            background-color: #F0A500;
+            color: #0C3D28;
+            border-radius: 50%;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .step-content {
+            padding-top: 0.25rem;
+        }
+
+        .step-content p {
+            color: #333;
+            font-size: 0.95rem;
+        }
+
+        .data-section {
+            background-color: #f9f7f4;
+            padding: 1.5rem;
+            border-left: 4px solid #F0A500;
+            margin-bottom: 1.5rem;
+            border-radius: 4px;
+        }
+
+        .data-section h4 {
+            color: #0C3D28;
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+
+        .data-section p {
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .support-section {
+            background: linear-gradient(135deg, #0C3D28 0%, #1a5a3d 100%);
+            color: #FFFFFF;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .support-section h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .support-section p {
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+        }
+
+        .support-email {
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.15);
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            margin-top: 0.75rem;
+        }
+
+        .support-email a {
+            color: #F0A500;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.05rem;
+        }
+
+        .support-email a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #0C3D28;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 2rem 1rem;
+            font-size: 0.9rem;
+            border-top: 2px solid #F0A500;
+        }
+
+        footer p {
+            opacity: 0.9;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            header p {
+                font-size: 0.9rem;
+            }
+
+            .container {
+                padding: 1.5rem 0.75rem;
+            }
+
+            .section {
+                padding: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .section-title {
+                font-size: 1.25rem;
+            }
+
+            .step {
+                gap: 0.75rem;
+            }
+
+            .support-section {
+                padding: 1.5rem;
+            }
+
+            .support-section h3 {
+                font-size: 1.1rem;
+            }
+
+            .intro-text {
+                font-size: 0.95rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.25rem;
+            }
+
+            header p {
+                font-size: 0.85rem;
+            }
+
+            .container {
+                padding: 1rem 0.5rem;
+            }
+
+            .section {
+                padding: 1.25rem;
+                margin-bottom: 1.25rem;
+            }
+
+            .section-title {
+                font-size: 1.1rem;
+            }
+
+            .step-number {
+                width: 1.75rem;
+                height: 1.75rem;
+                font-size: 0.9rem;
+            }
+
+            .step-content p {
+                font-size: 0.9rem;
+            }
+
+            .data-section {
+                padding: 1rem;
+            }
+
+            .data-section h4 {
+                font-size: 1rem;
+            }
+
+            .data-section p {
+                font-size: 0.9rem;
+            }
+
+            .support-section {
+                padding: 1.25rem;
+            }
+
+            .support-section h3 {
+                font-size: 1rem;
+            }
+
+            .support-section p {
+                font-size: 0.9rem;
+            }
+
+            .support-email a {
+                font-size: 1rem;
+            }
+
+            footer {
+                padding: 1.5rem 0.75rem;
+                font-size: 0.85rem;
+            }
+        }
+
+        /* Accessibility improvements */
+        a {
+            outline-offset: 2px;
+        }
+
+        a:focus {
+            outline: 2px solid #F0A500;
+        }
+
+        button:focus,
+        input:focus {
+            outline: 2px solid #F0A500;
+            outline-offset: 2px;
+        }
+
+        /* Print styles */
+        @media print {
+            body {
+                background-color: #FFFFFF;
+            }
+
+            header, footer {
+                background-color: #0C3D28;
+                color: #FFFFFF;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Delete Your Muzzomo Account</h1>
+        <p>Account and Data Request</p>
+    </header>
+
+    <div class="container">
+        <!-- Introduction Section -->
+        <section class="section">
+            <p class="intro-text">
+                <strong>Muzzomo</strong> is a home service platform connecting users with trusted professionals. 
+                If you wish to delete your account and associated data, please follow the steps below.
+            </p>
+            <p class="intro-text">
+                <strong>Important:</strong> Account deletion must be completed inside the Muzzomo mobile app, 
+                as it requires you to be signed in securely to verify your identity and protect your account.
+            </p>
+        </section>
+
+        <!-- Steps Section -->
+        <section class="section">
+            <h2 class="section-title">How to Delete Your Account</h2>
+            <p class="intro-text">
+                To delete your Muzzomo account and associated data, please follow these steps:
+            </p>
+
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <p>Open the Muzzomo mobile app.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <p>Sign in to your account.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <p>On the Home screen, tap your profile avatar in the app bar.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <p>In the drawer menu, tap your profile avatar.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <p>Your Profile page will open.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">6</div>
+                    <div class="step-content">
+                        <p>Tap the Edit Profile button.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">7</div>
+                    <div class="step-content">
+                        <p>Scroll to the bottom of the Edit Profile page.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">8</div>
+                    <div class="step-content">
+                        <p>Tap Delete Account.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">9</div>
+                    <div class="step-content">
+                        <p>The Delete Account page will open.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">10</div>
+                    <div class="step-content">
+                        <p>Follow the instructions on that page to permanently delete your account and associated data.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Data Deletion Section -->
+        <section class="section">
+            <h2 class="section-title">What Data Is Deleted</h2>
+
+            <div class="data-section">
+                <h4>✓ Data Deleted</h4>
+                <p>
+                    When you delete your account, Muzzomo will delete or deactivate your account profile and associated personal data, 
+                    including profile information, contact information, saved addresses, service requests, bookings, and related account data, 
+                    subject to any legal, security, payment, fraud-prevention, or compliance retention requirements.
+                </p>
+            </div>
+
+            <div class="data-section">
+                <h4>⚠ Data That May Be Retained</h4>
+                <p>
+                    Some records may be retained for a limited period where required for legal, accounting, payment, security, 
+                    dispute resolution, or compliance purposes.
+                </p>
+            </div>
+        </section>
+
+        <!-- Support Section -->
+        <section class="support-section">
+            <h3>Need Help?</h3>
+            <p>If you have any questions or need assistance with deleting your account, please contact us:</p>
+            <div class="support-email">
+                <a href="mailto:support@muzzomo.ca">support@muzzomo.com</a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; Muzzomo. All rights reserved.</p>
+    </footer>
+</body>
+</html>
